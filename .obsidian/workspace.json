@@ -1,0 +1,246 @@
+{
+  "main": {
+    "id": "7a8e420ec6e9bd50",
+    "type": "split",
+    "children": [
+      {
+        "id": "5c82506f2accd8ce",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "522c7178b3bcde2d",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "studies/bachlor_exam/6_metodyka_programowania/xEiT_6_Metodyki-programowania.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "xEiT_6_Metodyki-programowania"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d0cf4831fcfee5cf",
+    "type": "split",
+    "children": [
+      {
+        "id": "5473e27542f7247f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a61c816b3cf24ba4",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "703f802f021e4bc0",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#Sputtering_magnetronowy",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "6204d85c3b425ebb",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 327
+  },
+  "right": {
+    "id": "a3a5c974cef2fd13",
+    "type": "split",
+    "children": [
+      {
+        "id": "2b572747dd4ff7fc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d24433cb86c464df",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Markdown.md.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Markdown.md"
+            }
+          },
+          {
+            "id": "2b7b477c04daa697",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Markdown.md.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Markdown.md"
+            }
+          },
+          {
+            "id": "6dc002ba7ffec9ec",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "4ae850b75c430533",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "studies/bachlor_exam/6_metodyka_programowania/xEiT_6_Metodyki-programowania.pdf",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of xEiT_6_Metodyki-programowania"
+            }
+          },
+          {
+            "id": "2967f197172cc5aa",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "git-view"
+            }
+          },
+          {
+            "id": "faac2d58915a67bb",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {},
+              "icon": "spreadsheet",
+              "title": "Advanced Tables"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": true,
+      "daily-notes:Open today's daily note": true,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "obsidian-git:Open Git source control": false,
+      "omnisearch:Omnisearch": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "callout-manager:Insert Callout": false
+    }
+  },
+  "active": "522c7178b3bcde2d",
+  "lastOpenFiles": [
+    "studies/bachlor_exam/5_SIeci_komputerowe/xEiT_5_Sieci-Komputerowe.pdf",
+    "studies/bachlor_exam/4_SIS/xEiT_4_Systemy-i-Sieci.pdf",
+    "studies/bachlor_exam/3_EE_AUE/xEiT_3_Elementy_Elektroniczne_oraz_Analogowe_Układy_Elektroniczne.pdf",
+    "studies/bachlor_exam/2_CPS/xEiT_2_CPS-3.pdf",
+    "studies/bachlor_exam/1_Teoria_sygnalow/xEiT_1_TS.pdf",
+    "studies/bachlor_exam/1_Teoria_sygnalow/TEORIA SYGNAŁÓW.md",
+    "studies/bachlor_exam/1_Teoria_sygnalow/Transformata Fouriera (todo).md",
+    "studies/bachlor_exam/8_TC_MP/xEiT_8_TC-MP-1.pdf",
+    "studies/bachlor_exam/4_SIS/SIS.md",
+    "studies/prezentacje/xEiT_1_TS.pdf",
+    "studies/prezentacje/TC_TM_Pater.pdf",
+    "studies/bachlor_exam/5_SIeci_komputerowe/Sieci komputerowe.md",
+    "studies/bachlor_exam/8_TC_MP/Cyfrówka.md",
+    "studies/bachlor_exam/8_TC_MP/Bramki logiczne i układy kombinacyjne.md",
+    "studies/bachlor_exam/8_TC_MP/latch.md",
+    "studies/bachlor_exam/8_TC_MP/assets/Pasted image 20251116163439.png",
+    "studies/bachlor_exam/8_TC_MP/assets/Pasted image 20251116163420.png",
+    "studies/bachlor_exam/8_TC_MP/assets/Pasted image 20251116163323.png",
+    "studies/bachlor_exam/8_TC_MP/assets/Pasted image 20251116163243.png",
+    "studies/bachlor_exam/8_TC_MP/assets/Pasted image 20251116163230.png",
+    "studies/bachlor_exam/8_TC_MP/assets/Pasted image 20251116163120.png",
+    "studies/bachlor_exam/8_TC_MP/interrupts.md",
+    "studies/bachlor_exam/8_TC_MP/Układy sekwencyjne.md",
+    "studies/bachlor_exam/8_TC_MP/MCU.md",
+    "studies/bachlor_exam/8_TC_MP/assets/Pasted image 20251116161852.png",
+    "studies/bachlor_exam/8_TC_MP/assets/Pasted image 20251116161713.png",
+    "studies/bachlor_exam/8_TC_MP/assets/Pasted image 20251116161632.png",
+    "studies/bachlor_exam/8_TC_MP/assets/Pasted image 20251116161551.png",
+    "Excalidraw/Drawing 2025-11-16 15.45.08.excalidraw.md",
+    "studies/bachlor_exam/1_Teoria_sygnalow/Próbkowanie sygnałów.md",
+    "studies/bachlor_exam/1_Teoria_sygnalow/Liczby zespolone.md",
+    "studies/bachlor_exam/1_Teoria_sygnalow/Laplace.md",
+    "studies/bachlor_exam/1_Teoria_sygnalow/Filtry analogowe (todo).md",
+    "studies/bachlor_exam/2_CPS/Filtry FIR.md",
+    "studies/bachlor_exam/2_CPS/CPS.md",
+    "studies/bachlor_exam/2_CPS/Transformata Z.md",
+    "studies/bachlor_exam/2_CPS/LTI.md",
+    "studies/bachlor_exam/2_CPS/Kompresja sygnałów.md",
+    "studies/bachlor_exam/6_metodyka_programowania/Metodyki Programowania.md",
+    "studies/bachlor_exam/8_TC_MP/ADC_DAC.md",
+    "studies/bachlor_exam/1_Teoria_sygnalow/Sygnały wektorowe(todo).md",
+    "studies/bachlor_exam/3_EE_AUE/EE_AUE.md",
+    "studies/bachlor_exam/8_TC_MP/IO_mikrokontroler.md",
+    "studies/prezentacje/xEiT_9_RF.pdf",
+    "studies/prezentacje/xEiT_8_TC-MP.pdf",
+    "studies/prezentacje/xEiT_7_Jęzki-Programowania.pdf",
+    "Untitled.canvas",
+    "studies/Untitled.canvas"
+  ]
+}

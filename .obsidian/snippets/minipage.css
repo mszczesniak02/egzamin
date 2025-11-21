@@ -1,0 +1,7 @@
+.columns {
+  display: flex;
+  gap: 1em;
+}
+.column {
+  flex: 1;
+}
