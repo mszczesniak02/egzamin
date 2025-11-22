@@ -1,4 +1,4 @@
-> [!info] # [[Transformata Fouriera (todo)]]]
+> [!info] # [[Transformata Fouriera]]]
 >1. Definicja i właściwości DFT
 >2. Interpretacja części amplitudowej i fazowej transformaty
 >3. Symetrie w DFT sygnału rzeczywistego
@@ -7,7 +7,7 @@
 
   
 
-> [!info] # [[Analiza częstotliwościowa sygnałów analogowych]]
+> [!info] # [[Analiza czasowo-częstotliwościowa sygnałów analogowych]]
 >4. Krótko-czasowa transformacja Fouriera (STFT) dla sygnałów cyfrowych
 >5. Rodzaje okien dla sygnałów cyfrowych i ich zastosowania
 

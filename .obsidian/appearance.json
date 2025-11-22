@@ -2,5 +2,6 @@
   "cssTheme": "AnuPpuccin",
   "nativeMenus": false,
   "enabledCssSnippets": [],
-  "baseFontSize": 16
+  "baseFontSize": 16,
+  "theme": "obsidian"
 }

@@ -3,7 +3,7 @@
  [[Liczby zespolone| liczby zespolone powtórka ]] 
  szeregi Fouriera
 
- > [!info] # [[Analiza częstotliwościowa sygnałów analogowych]]
+ > [!info] # [[Analiza czasowo-częstotliwościowa sygnałów analogowych]]
 >  Transformata ciągła Fouriera, podstawowe funkcje, symetrie, własności
 
 >[!info] # [[ Laplace]] 
@@ -23,7 +23,7 @@
 >[!info] # [[Próbkowanie sygnałów]]
  Próbkowanie, Twierdzenie, Aliasing, kwantyzacja, błędy
 
->[!info] # [[Transformata Fouriera (todo)]]
+>[!info] # [[Transformata Fouriera]]
  Ciągła oraz dyskretna transformata fouriera
  
 > [!info] #  [[Szereg_fouriera]]

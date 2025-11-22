@@ -11,15 +11,42 @@
             "id": "522c7178b3bcde2d",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          },
+          {
+            "id": "74b0dcc200bf8151",
+            "type": "leaf",
+            "state": {
+              "type": "bases",
               "state": {
-                "file": "studies/bachlor_exam/6_metodyka_programowania/xEiT_6_Metodyki-programowania.pdf"
+                "file": "Untitled.base",
+                "viewName": "Table"
               },
-              "icon": "lucide-file-text",
-              "title": "xEiT_6_Metodyki-programowania"
+              "icon": "lucide-table",
+              "title": "Untitled"
+            }
+          },
+          {
+            "id": "4b3cd55d7855d026",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "studies/bachlor_exam/1_Teoria_sygnalow/Szereg_fouriera.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "Szereg_fouriera"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -51,7 +78,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#Sputtering_magnetronowy",
+                "query": "tag:#IFT",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -76,7 +103,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 327
+    "width": 405
   },
   "right": {
     "id": "a3a5c974cef2fd13",
@@ -140,13 +167,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "studies/bachlor_exam/6_metodyka_programowania/xEiT_6_Metodyki-programowania.pdf",
+                "file": "studies/bachlor_exam/1_Teoria_sygnalow/Transformata Fouriera (todo).md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of xEiT_6_Metodyki-programowania"
+              "title": "Outline of Transformata Fouriera (todo)"
             }
           },
           {
@@ -155,8 +182,8 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "lucide-ghost",
-              "title": "git-view"
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           },
           {
@@ -170,11 +197,11 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 594
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -192,54 +219,54 @@
       "callout-manager:Insert Callout": false
     }
   },
-  "active": "522c7178b3bcde2d",
+  "active": "4b3cd55d7855d026",
   "lastOpenFiles": [
-    "studies/bachlor_exam/5_SIeci_komputerowe/xEiT_5_Sieci-Komputerowe.pdf",
-    "studies/bachlor_exam/4_SIS/xEiT_4_Systemy-i-Sieci.pdf",
-    "studies/bachlor_exam/3_EE_AUE/xEiT_3_Elementy_Elektroniczne_oraz_Analogowe_Układy_Elektroniczne.pdf",
-    "studies/bachlor_exam/2_CPS/xEiT_2_CPS-3.pdf",
-    "studies/bachlor_exam/1_Teoria_sygnalow/xEiT_1_TS.pdf",
     "studies/bachlor_exam/1_Teoria_sygnalow/TEORIA SYGNAŁÓW.md",
-    "studies/bachlor_exam/1_Teoria_sygnalow/Transformata Fouriera (todo).md",
-    "studies/bachlor_exam/8_TC_MP/xEiT_8_TC-MP-1.pdf",
-    "studies/bachlor_exam/4_SIS/SIS.md",
-    "studies/prezentacje/xEiT_1_TS.pdf",
-    "studies/prezentacje/TC_TM_Pater.pdf",
-    "studies/bachlor_exam/5_SIeci_komputerowe/Sieci komputerowe.md",
-    "studies/bachlor_exam/8_TC_MP/Cyfrówka.md",
-    "studies/bachlor_exam/8_TC_MP/Bramki logiczne i układy kombinacyjne.md",
-    "studies/bachlor_exam/8_TC_MP/latch.md",
-    "studies/bachlor_exam/8_TC_MP/assets/Pasted image 20251116163439.png",
-    "studies/bachlor_exam/8_TC_MP/assets/Pasted image 20251116163420.png",
-    "studies/bachlor_exam/8_TC_MP/assets/Pasted image 20251116163323.png",
-    "studies/bachlor_exam/8_TC_MP/assets/Pasted image 20251116163243.png",
-    "studies/bachlor_exam/8_TC_MP/assets/Pasted image 20251116163230.png",
-    "studies/bachlor_exam/8_TC_MP/assets/Pasted image 20251116163120.png",
-    "studies/bachlor_exam/8_TC_MP/interrupts.md",
-    "studies/bachlor_exam/8_TC_MP/Układy sekwencyjne.md",
-    "studies/bachlor_exam/8_TC_MP/MCU.md",
-    "studies/bachlor_exam/8_TC_MP/assets/Pasted image 20251116161852.png",
-    "studies/bachlor_exam/8_TC_MP/assets/Pasted image 20251116161713.png",
-    "studies/bachlor_exam/8_TC_MP/assets/Pasted image 20251116161632.png",
-    "studies/bachlor_exam/8_TC_MP/assets/Pasted image 20251116161551.png",
-    "Excalidraw/Drawing 2025-11-16 15.45.08.excalidraw.md",
-    "studies/bachlor_exam/1_Teoria_sygnalow/Próbkowanie sygnałów.md",
-    "studies/bachlor_exam/1_Teoria_sygnalow/Liczby zespolone.md",
-    "studies/bachlor_exam/1_Teoria_sygnalow/Laplace.md",
+    "studies/bachlor_exam/1_Teoria_sygnalow/Transformata Fouriera.md",
     "studies/bachlor_exam/1_Teoria_sygnalow/Filtry analogowe (todo).md",
-    "studies/bachlor_exam/2_CPS/Filtry FIR.md",
-    "studies/bachlor_exam/2_CPS/CPS.md",
-    "studies/bachlor_exam/2_CPS/Transformata Z.md",
-    "studies/bachlor_exam/2_CPS/LTI.md",
-    "studies/bachlor_exam/2_CPS/Kompresja sygnałów.md",
-    "studies/bachlor_exam/6_metodyka_programowania/Metodyki Programowania.md",
-    "studies/bachlor_exam/8_TC_MP/ADC_DAC.md",
     "studies/bachlor_exam/1_Teoria_sygnalow/Sygnały wektorowe(todo).md",
-    "studies/bachlor_exam/3_EE_AUE/EE_AUE.md",
+    "studies/bachlor_exam/8_TC_MP/Bramki logiczne i układy kombinacyjne.md",
+    "studies/bachlor_exam/8_TC_MP/ADC_DAC.md",
+    "studies/bachlor_exam/4_SIS/Protokoły komunikacji szeregowej.md",
+    "studies/bachlor_exam/1_Teoria_sygnalow/xEiT_1_TS.pdf",
+    "studies/bachlor_exam/2_CPS/xEiT_2_CPS-3.pdf",
+    "studies/bachlor_exam/2_CPS/Filtry FIR.md",
+    "Excalidraw/Drawing 2025-11-22 16.41.18.excalidraw.md",
+    "Untitled.base",
+    "studies/bachlor_exam/1_Teoria_sygnalow/assets/Pasted image 20251122164000.png",
+    "studies/bachlor_exam/1_Teoria_sygnalow/Szereg_fouriera.md",
+    "studies/bachlor_exam/1_Teoria_sygnalow/Liczby zespolone.md",
+    "studies/bachlor_exam/1_Teoria_sygnalow/Analiza czasowo-częstotliwościowa sygnałów analogowych.md",
+    "studies/bachlor_exam/1_Teoria_sygnalow/Splot.md",
+    "studies/bachlor_exam/1_Teoria_sygnalow/Próbkowanie sygnałów.md",
+    "studies/bachlor_exam/1_Teoria_sygnalow/Laplace.md",
+    "studies/bachlor_exam/1_Teoria_sygnalow/delta Diraca.md",
+    "Excalidraw/Drawing 2025-11-22 15.05.44.excalidraw.md",
+    "Excalidraw",
+    "studies/bachlor_exam/3_EE_AUE/Analiza obwodów.md",
+    "studies/bachlor_exam/9_RF/xEiT_9_RF-1.pdf",
+    "studies/bachlor_exam/9_RF/Mikrofale.md",
+    "studies/bachlor_exam/8_TC_MP/Układy sekwencyjne.md",
     "studies/bachlor_exam/8_TC_MP/IO_mikrokontroler.md",
+    "studies/bachlor_exam/8_TC_MP/interrupts.md",
+    "studies/bachlor_exam/8_TC_MP/Cyfrówka.md",
+    "studies/bachlor_exam/7_Jezyki_programowania/xEiT_7_Jęzki-Programowania.pdf",
+    "studies/bachlor_exam/7_Jezyki_programowania/c&cpp.md",
+    "studies/bachlor_exam/7_Jezyki_programowania/Classes.md",
+    "studies/bachlor_exam/2_CPS/LTI.md",
+    "studies/bachlor_exam/2_CPS/prezentacja/Pasted image 20251006210815.png",
+    "studies/prezentacje/xEiT_2_CPS.pdf",
+    "studies/bachlor_exam/1_Teoria_sygnalow/assets/Pasted image 20251010233433.png",
+    "studies/bachlor_exam/1_Teoria_sygnalow/assets/Pasted image 20251010233225.png",
+    "studies/bachlor_exam/1_Teoria_sygnalow/assets/Pasted image 20251010153139.png",
+    "studies/bachlor_exam/1_Teoria_sygnalow/assets/Pasted image 20251010153102.png",
+    "studies/bachlor_exam/1_Teoria_sygnalow/assets/Pasted image 20251010153054.png",
+    "studies/bachlor_exam/1_Teoria_sygnalow/assets/Pasted image 20251010153031.png",
     "studies/prezentacje/xEiT_9_RF.pdf",
     "studies/prezentacje/xEiT_8_TC-MP.pdf",
-    "studies/prezentacje/xEiT_7_Jęzki-Programowania.pdf",
+    "studies/prezentacje/xEiT_1_TS.pdf",
+    "studies/bachlor_exam/8_TC_MP/assets/Pasted image 20251116163439.png",
+    "studies/bachlor_exam/8_TC_MP/assets/Pasted image 20251116163420.png",
     "Untitled.canvas",
     "studies/Untitled.canvas"
   ]
