@@ -1,0 +1,27 @@
+name: Aktualizuj tylko pytania i zagadnienia w branchu build
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-zagadnienia-pytania:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout branch build
+      uses: actions/checkout@v4
+      with:
+        ref: build
+        fetch-depth: 0
+
+    - name: Aktualizuj pytania i zagadnienia (z main)
+      run: |
+        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+        git fetch origin main
+        rm -rf pytania zagadnienia          # usuwa stare wersje tych folderów z branchu build
+        git checkout origin/main -- pytania zagadnienia   # pobiera z najnowszego main wyłącznie te foldery
+        git add pytania zagadnienia
+        git commit -m "Aktualizacja pytania i zagadnienia z main" || echo "Nic do commitowania"
+        git push origin build
