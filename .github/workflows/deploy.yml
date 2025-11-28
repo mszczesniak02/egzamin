@@ -1,30 +1,49 @@
-name: Aktualizuj tylko pytania i zagadnienia w branchu build
+name: Deploy to Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
 
 jobs:
-  update-zagadnienia-pytania:
+  build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout branch build
-      uses: actions/checkout@v4
-      with:
-        ref: build
-        fetch-depth: 0
+      # 1. Pobierz kod z repozytorium
+      - name: Checkout
+        uses: actions/checkout@v4
 
-    - name: Skopiuj pytania i zagadnienia z main do build
-      run: |
-        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-        git fetch origin main
-        git pull origin build
-        rm -rf pytania zagadnienia   
-        git checkout origin/main -- pytania zagadnienia   
-        git config --local user.name "GitHub Actions"
-        git config --local user.email "actions@github.com"
-        git add pytania zagadnienia
-        git commit --allow-empty -m "Aktualizacja pytania i zagadnienia z main"
-        git push origin build
+      # 2. Skonfiguruj Pythona (zakładam, że masz skrypt w Pythonie)
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      # 3. Uruchom Twój skrypt konwertujący
+      # Upewnij się, że 'twoj_skrypt.py' to poprawna ścieżka do pliku, który generuje JSONy
+      - name: Convert MD to JSON
+        run: python sciezka/do/twojego_skryptu.py
+
+      # 4. Skonfiguruj Pages
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      # 5. Zbuduj artefakt (wszystko co jest w folderze, np. '.' dla całego repo)
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.' # Tu wskaż folder, który ma być na stronie (np. '.' albo './dist')
+
+      # 6. Wrzuć na GitHub Pages
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
