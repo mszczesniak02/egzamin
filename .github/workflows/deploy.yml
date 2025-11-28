@@ -20,8 +20,9 @@ jobs:
       run: |
         git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
         git fetch origin main
-        rm -rf pytania zagadnienia          # usuwa tylko pytania/zagadnienia ze starego builda
-        git checkout origin/main -- pytania zagadnienia   # pobiera z main najnowsze te dwa foldery
+        git pull origin build
+        rm -rf pytania zagadnienia   
+        git checkout origin/main -- pytania zagadnienia   
         git add pytania zagadnienia
-        git commit -m "Aktualizacja pytania i zagadnienia z main" || echo "Nic do commitowania"
+        git commit --allow-empty -m "Aktualizacja pytania i zagadnienia z main"
         git push origin build
