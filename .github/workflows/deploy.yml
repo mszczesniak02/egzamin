@@ -16,12 +16,12 @@ jobs:
         ref: build
         fetch-depth: 0
 
-    - name: Aktualizuj pytania i zagadnienia (z main)
+    - name: Skopiuj pytania i zagadnienia z main do build
       run: |
         git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
         git fetch origin main
-        rm -rf pytania zagadnienia          # usuwa stare wersje tych folderów z branchu build
-        git checkout origin/main -- pytania zagadnienia   # pobiera z najnowszego main wyłącznie te foldery
+        rm -rf pytania zagadnienia          # usuwa tylko pytania/zagadnienia ze starego builda
+        git checkout origin/main -- pytania zagadnienia   # pobiera z main najnowsze te dwa foldery
         git add pytania zagadnienia
         git commit -m "Aktualizacja pytania i zagadnienia z main" || echo "Nic do commitowania"
         git push origin build
