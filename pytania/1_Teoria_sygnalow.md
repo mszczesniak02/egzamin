@@ -3,6 +3,12 @@
 >>[!danger] ## Kategoria
 >>>[!question]- #### dokąd nocą tupta jeż
 >>>>[!quote] Odpowiedź
+>>
+>>>[!question]- #### gdzie wieje wiatr
+>>>>[!quote] Odpowiedź
+>>
+>>>[!question]- #### czy wiesz co to bin chilin
+>>>>[!quote] Odpowiedź
 
 
 ---
