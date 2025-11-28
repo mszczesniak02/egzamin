@@ -1,10 +1,11 @@
-name: Deploy to Pages
+name: Build and Deploy
 
 on:
   push:
-    branches: ["main"]
-  workflow_dispatch:
+    branches: ["main"]  # Uruchamia się przy każdej zmianie w main
+  workflow_dispatch:    # Pozwala na ręczne uruchomienie z zakładki Actions
 
+# Uprawnienia potrzebne do publikacji na GitHub Pages
 permissions:
   contents: read
   pages: write
@@ -15,35 +16,44 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build-and-deploy:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      # 1. Pobierz kod z repozytorium
+      # 1. Pobieramy repozytorium
       - name: Checkout
         uses: actions/checkout@v4
 
-      # 2. Skonfiguruj Pythona (zakładam, że masz skrypt w Pythonie)
+      # 2. Instalujemy Pythona
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.x'
 
-      # 3. Uruchom Twój skrypt konwertujący
-      # Upewnij się, że 'twoj_skrypt.py' to poprawna ścieżka do pliku, który generuje JSONy
-      - name: Convert MD to JSON
-        run: python sciezka/do/twojego_skryptu.py
+      # 3. (OPCJONALNE) Jeśli Twój skrypt używa niestandardowych bibliotek
+      # Sprawdź, co importujesz w md_to_json.py. Jeśli masz tam np. 'import yaml' lub 'frontmatter',
+      # odkomentuj poniższe linie i wpisz odpowiednie biblioteki:
+      # - name: Install dependencies
+      #   run: pip install pyyaml
 
-      # 4. Skonfiguruj Pages
+      # 4. Uruchamiamy Twój skrypt
+      # To wygeneruje plik .json w środowisku Githuba (obok pliku index.html)
+      - name: Generate JSON data
+        run: python md_to_json.py
+
+      # 5. Konfiguracja Pages
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
-      # 5. Zbuduj artefakt (wszystko co jest w folderze, np. '.' dla całego repo)
+      # 6. Pakujemy całą zawartość folderu (razem z nowym .json)
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.' # Tu wskaż folder, który ma być na stronie (np. '.' albo './dist')
+          path: '.'
 
-      # 6. Wrzuć na GitHub Pages
+      # 7. Wysyłamy na serwer
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
