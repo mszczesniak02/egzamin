@@ -23,6 +23,8 @@ jobs:
         git pull origin build
         rm -rf pytania zagadnienia   
         git checkout origin/main -- pytania zagadnienia   
+        git config --local user.name "GitHub Actions"
+        git config --local user.email "actions@github.com"
         git add pytania zagadnienia
         git commit --allow-empty -m "Aktualizacja pytania i zagadnienia z main"
         git push origin build
