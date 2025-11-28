@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiMessageCircleQuestion",
       "LiInfo",
       "LiDock",
       "🖼",
-      "LiAirplay",
-      "LiAngry"
+      "LiAirplay"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -39,5 +39,6 @@
   "zagadnienia": "LiAngry",
   "prezentacje": "LiAirplay",
   "assets": "🖼",
-  "readme.md": "LiInfo"
+  "readme.md": "LiInfo",
+  "pytania": "LiMessageCircleQuestion"
 }

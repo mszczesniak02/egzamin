@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "readme.md",
+                "file": "pytania/1_Teoria_sygnalow.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "readme"
+              "title": "1_Teoria_sygnalow"
             }
           }
         ]
@@ -164,8 +164,9 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "a61c816b3cf24ba4",
+  "active": "9966a096ce8224c4",
   "lastOpenFiles": [
+    "readme.md",
     "pytania_json/3_EE_AUE.json",
     "pytania_json/8_TC_MP.json",
     "pytania_json/9_RF.json",
@@ -176,7 +177,6 @@
     "pytania_json/2_CPS.json",
     "pytania_json/1_Teoria_sygnalow.json",
     "pytania_json",
-    "md_to_json.py",
     "pytania/9_RF.md",
     "pytania/8_TC_MP.md",
     "pytania/7_Jezyki_programowania.md",
@@ -186,7 +186,6 @@
     "pytania/3_EE_AUE.md",
     "pytania/2_CPS.md",
     "pytania/1_Teoria_sygnalow.md",
-    "readme.md",
     "docs/pytania/1_Teoria_sygnalow.md",
     "docs/pytania/9_RF.md",
     "docs/pytania/8_TC_MP.md",
