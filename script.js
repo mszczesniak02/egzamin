@@ -286,7 +286,7 @@ async function fetchQuestions() {
     try {
         // 1. Get directory listing of ../pytania/
         // Note: This relies on the web server having directory listing enabled (default for python http.server)
-        const response = await fetch('../pytania/');
+        const response = await fetch('pytania/');
         if (!response.ok) throw new Error(`Błąd sieci: ${response.status}`);
         
         const text = await response.text();
@@ -313,7 +313,7 @@ async function fetchQuestions() {
 
         for (const filename of mdFiles) {
             // Fetch individual file content with cache busting
-            const fileRes = await fetch(`../pytania/${filename}?t=${Date.now()}`);
+            const fileRes = await fetch(`pytania/${filename}?t=${Date.now()}`);
             if (fileRes.ok) {
                 const content = await fileRes.text();
                 const questions = parseMarkdown(content);
