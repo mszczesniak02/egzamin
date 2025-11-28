@@ -11,10 +11,15 @@
             "id": "9966a096ce8224c4",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "readme.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "readme"
             }
           }
         ]
@@ -162,6 +167,7 @@
   "active": "9966a096ce8224c4",
   "lastOpenFiles": [
     "pytania/1_Teoria_sygnalow.md",
+    "readme.md",
     "pytania/2_CPS.md",
     "pytania/9_RF.md",
     "pytania/8_TC_MP.md",
@@ -194,7 +200,6 @@
     "zagadnienia/1_Teoria_sygnalow_teoria/Laplace.md",
     "zagadnienia/1_Teoria_sygnalow_teoria/Filtry analogowe (todo).md",
     "zagadnienia/1_Teoria_sygnalow_teoria/delta Diraca.md",
-    "zagadnienia/1_Teoria_sygnalow_teoria/Analiza częstotliwościowa sygnałów analogowych.md",
     "zagadnienia/1_Teoria_sygnalow_teoria/xEiT_1_TS.pdf",
     "bachlor_exam/2_CPS_pytania/xEiT_2_CPS-3.pdf",
     "bachlor_exam/8_TC_MP_pytania/assets/Pasted image 20251116163439.png",
