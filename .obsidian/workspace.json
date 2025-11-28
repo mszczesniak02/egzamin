@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "pytania/1_Teoria_sygnalow.md",
-                "mode": "preview",
+                "file": "readme.md",
+                "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "1_Teoria_sygnalow"
+              "title": "readme"
             }
           }
         ]
@@ -79,8 +79,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 292.5026054382324,
-    "collapsed": true
+    "width": 292.5026054382324
   },
   "right": {
     "id": "a3a5c974cef2fd13",
@@ -165,25 +164,14 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "9966a096ce8224c4",
+  "active": "a61c816b3cf24ba4",
   "lastOpenFiles": [
-    "docs/style.css",
-    "docs/script_new.js",
-    "docs/script.js",
-    "docs/index.html",
-    "docs/animations_new.js",
-    "docs/animations.js",
-    "docs",
-    "assets/index.gif",
-    "readme.md",
-    "assets/obs_tut.gif",
-    "assets",
     "style.css",
-    "script_new.js",
     "script.js",
-    "maszynka.md",
-    "pytania/1_Teoria_sygnalow.md",
-    "pytania/2_CPS.md",
+    "script_new.js",
+    "index.html",
+    "animations.js",
+    "animations_new.js",
     "pytania/9_RF.md",
     "pytania/8_TC_MP.md",
     "pytania/7_Jezyki_programowania.md",
@@ -191,28 +179,39 @@
     "pytania/5_SIeci_komputerowe.md",
     "pytania/4_SIS.md",
     "pytania/3_EE_AUE.md",
+    "pytania/2_CPS.md",
+    "pytania/1_Teoria_sygnalow.md",
+    "pytania",
+    "readme.md",
+    "docs/pytania/1_Teoria_sygnalow.md",
+    "docs/pytania/9_RF.md",
+    "docs/pytania/8_TC_MP.md",
+    "docs/pytania/7_Jezyki_programowania.md",
+    "docs/pytania/6_metodyka_programowania.md",
+    "docs/pytania/5_SIeci_komputerowe.md",
+    "docs/pytania/4_SIS.md",
+    "docs/pytania/3_EE_AUE.md",
+    "docs/pytania/2_CPS.md",
+    "docs/pytania",
+    "assets/obs_tut.gif",
+    "assets/index.gif",
+    "assets/obs_tut-ezgif.com-crop.gif",
+    "assets/index-ezgif.com-resize.gif",
+    "docs/style.css",
+    "docs/script_new.js",
+    "docs/script.js",
+    "maszynka.md",
     "Templates/Pytanie.md",
     "Templates/Kategoria.md",
     "Templates/Zagadnienie.md",
     "templates/snippets.md",
     "zagadnienia/8_TC_MP_teoria/Cyfrówka.md",
-    "zagadnienia/1_Teoria_sygnalow_teoria/TEORIA SYGNAŁÓW.md",
-    "bachlor_exam/1_Teoria_sygnalow_pytania/Untitled.md",
-    "zagadnienia/1_Teoria_sygnalow_teoria/Transformata Fouriera (todo).md",
-    "zagadnienia/1_Teoria_sygnalow_teoria/Szereg_fouriera.md",
-    "zagadnienia/1_Teoria_sygnalow_teoria/Sygnały wektorowe(todo).md",
-    "zagadnienia/1_Teoria_sygnalow_teoria/Splot.md",
-    "zagadnienia/1_Teoria_sygnalow_teoria/Próbkowanie sygnałów.md",
-    "zagadnienia/1_Teoria_sygnalow_teoria/Liczby zespolone.md",
-    "zagadnienia/1_Teoria_sygnalow_teoria/Laplace.md",
     "bachlor_exam/8_TC_MP_pytania/assets/Pasted image 20251116163439.png",
     "bachlor_exam/8_TC_MP_pytania/assets/Pasted image 20251116163420.png",
     "bachlor_exam/8_TC_MP_pytania/assets/Pasted image 20251116163323.png",
     "bachlor_exam/8_TC_MP_pytania/assets/Pasted image 20251116163243.png",
     "bachlor_exam/8_TC_MP_pytania/assets/Pasted image 20251116163230.png",
     "bachlor_exam/8_TC_MP_pytania/assets/Pasted image 20251116163120.png",
-    "bachlor_exam/8_TC_MP_pytania/assets/Pasted image 20251116161852.png",
-    "bachlor_exam/8_TC_MP_pytania/assets/Pasted image 20251116161713.png",
     "Untitled.canvas",
     "studies/Untitled.canvas"
   ]
