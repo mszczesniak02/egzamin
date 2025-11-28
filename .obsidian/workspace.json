@@ -4,19 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "5c82506f2accd8ce",
+        "id": "5d6293b9996011a1",
         "type": "tabs",
         "children": [
           {
-            "id": "522c7178b3bcde2d",
+            "id": "9966a096ce8224c4",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "studies/bachlor_exam/6_metodyka_programowania/xEiT_6_Metodyki-programowania.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "xEiT_6_Metodyki-programowania"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ]
@@ -76,7 +74,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 327
+    "width": 292.5026054382324
   },
   "right": {
     "id": "a3a5c974cef2fd13",
@@ -86,25 +84,6 @@
         "id": "2b572747dd4ff7fc",
         "type": "tabs",
         "children": [
-          {
-            "id": "d24433cb86c464df",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "Markdown.md.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-coming-in",
-              "title": "Backlinks for Markdown.md"
-            }
-          },
           {
             "id": "2b7b477c04daa697",
             "type": "leaf",
@@ -140,23 +119,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "studies/bachlor_exam/6_metodyka_programowania/xEiT_6_Metodyki-programowania.pdf",
+                "file": "bachlor_exam/1_Teoria_sygnalow_pytania/TEORIA SYGNAŁÓW.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of xEiT_6_Metodyki-programowania"
-            }
-          },
-          {
-            "id": "2967f197172cc5aa",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "lucide-ghost",
-              "title": "git-view"
+              "title": "Outline of TEORIA SYGNAŁÓW"
             }
           },
           {
@@ -165,81 +134,79 @@
             "state": {
               "type": "advanced-tables-toolbar",
               "state": {},
-              "icon": "spreadsheet",
-              "title": "Advanced Tables"
+              "icon": "lucide-ghost",
+              "title": "advanced-tables-toolbar"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": true,
-      "daily-notes:Open today's daily note": true,
-      "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
-      "obsidian-git:Open Git source control": false,
-      "omnisearch:Omnisearch": false,
       "obsidian-excalidraw-plugin:New drawing": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "callout-manager:Insert Callout": false
+      "callout-manager:Insert Callout": false,
+      "templater-obsidian:Templater": false
     }
   },
-  "active": "522c7178b3bcde2d",
+  "active": "9966a096ce8224c4",
   "lastOpenFiles": [
-    "studies/bachlor_exam/5_SIeci_komputerowe/xEiT_5_Sieci-Komputerowe.pdf",
-    "studies/bachlor_exam/4_SIS/xEiT_4_Systemy-i-Sieci.pdf",
-    "studies/bachlor_exam/3_EE_AUE/xEiT_3_Elementy_Elektroniczne_oraz_Analogowe_Układy_Elektroniczne.pdf",
-    "studies/bachlor_exam/2_CPS/xEiT_2_CPS-3.pdf",
-    "studies/bachlor_exam/1_Teoria_sygnalow/xEiT_1_TS.pdf",
-    "studies/bachlor_exam/1_Teoria_sygnalow/TEORIA SYGNAŁÓW.md",
-    "studies/bachlor_exam/1_Teoria_sygnalow/Transformata Fouriera (todo).md",
-    "studies/bachlor_exam/8_TC_MP/xEiT_8_TC-MP-1.pdf",
-    "studies/bachlor_exam/4_SIS/SIS.md",
-    "studies/prezentacje/xEiT_1_TS.pdf",
-    "studies/prezentacje/TC_TM_Pater.pdf",
-    "studies/bachlor_exam/5_SIeci_komputerowe/Sieci komputerowe.md",
-    "studies/bachlor_exam/8_TC_MP/Cyfrówka.md",
-    "studies/bachlor_exam/8_TC_MP/Bramki logiczne i układy kombinacyjne.md",
-    "studies/bachlor_exam/8_TC_MP/latch.md",
-    "studies/bachlor_exam/8_TC_MP/assets/Pasted image 20251116163439.png",
-    "studies/bachlor_exam/8_TC_MP/assets/Pasted image 20251116163420.png",
-    "studies/bachlor_exam/8_TC_MP/assets/Pasted image 20251116163323.png",
-    "studies/bachlor_exam/8_TC_MP/assets/Pasted image 20251116163243.png",
-    "studies/bachlor_exam/8_TC_MP/assets/Pasted image 20251116163230.png",
-    "studies/bachlor_exam/8_TC_MP/assets/Pasted image 20251116163120.png",
-    "studies/bachlor_exam/8_TC_MP/interrupts.md",
-    "studies/bachlor_exam/8_TC_MP/Układy sekwencyjne.md",
-    "studies/bachlor_exam/8_TC_MP/MCU.md",
-    "studies/bachlor_exam/8_TC_MP/assets/Pasted image 20251116161852.png",
-    "studies/bachlor_exam/8_TC_MP/assets/Pasted image 20251116161713.png",
-    "studies/bachlor_exam/8_TC_MP/assets/Pasted image 20251116161632.png",
-    "studies/bachlor_exam/8_TC_MP/assets/Pasted image 20251116161551.png",
-    "Excalidraw/Drawing 2025-11-16 15.45.08.excalidraw.md",
-    "studies/bachlor_exam/1_Teoria_sygnalow/Próbkowanie sygnałów.md",
-    "studies/bachlor_exam/1_Teoria_sygnalow/Liczby zespolone.md",
-    "studies/bachlor_exam/1_Teoria_sygnalow/Laplace.md",
-    "studies/bachlor_exam/1_Teoria_sygnalow/Filtry analogowe (todo).md",
-    "studies/bachlor_exam/2_CPS/Filtry FIR.md",
-    "studies/bachlor_exam/2_CPS/CPS.md",
-    "studies/bachlor_exam/2_CPS/Transformata Z.md",
-    "studies/bachlor_exam/2_CPS/LTI.md",
-    "studies/bachlor_exam/2_CPS/Kompresja sygnałów.md",
-    "studies/bachlor_exam/6_metodyka_programowania/Metodyki Programowania.md",
-    "studies/bachlor_exam/8_TC_MP/ADC_DAC.md",
-    "studies/bachlor_exam/1_Teoria_sygnalow/Sygnały wektorowe(todo).md",
-    "studies/bachlor_exam/3_EE_AUE/EE_AUE.md",
-    "studies/bachlor_exam/8_TC_MP/IO_mikrokontroler.md",
-    "studies/prezentacje/xEiT_9_RF.pdf",
-    "studies/prezentacje/xEiT_8_TC-MP.pdf",
-    "studies/prezentacje/xEiT_7_Jęzki-Programowania.pdf",
+    "pytania/1_Teoria_sygnalow.md",
+    "pytania/2_CPS.md",
+    "pytania/9_RF.md",
+    "pytania/8_TC_MP.md",
+    "pytania/7_Jezyki_programowania.md",
+    "pytania/6_metodyka_programowania.md",
+    "pytania/5_SIeci_komputerowe.md",
+    "pytania/4_SIS.md",
+    "pytania/3_EE_AUE.md",
+    "zagadnienia",
+    "pytania",
+    "Templates/Pytanie.md",
+    "Templates/Kategoria.md",
+    "Templates/Zagadnienie.md",
+    "Templates",
+    "Scripts/create_pytanie.js",
+    "Scripts/create_kategoria.js",
+    "Scripts/create_zagadnienie.js",
+    "Scripts",
+    "templates/snippets.md",
+    "templates",
+    "zagadnienia/8_TC_MP_teoria/Cyfrówka.md",
+    "zagadnienia/1_Teoria_sygnalow_teoria/TEORIA SYGNAŁÓW.md",
+    "bachlor_exam/1_Teoria_sygnalow_pytania/Untitled.md",
+    "zagadnienia/1_Teoria_sygnalow_teoria/Transformata Fouriera (todo).md",
+    "zagadnienia/1_Teoria_sygnalow_teoria/Szereg_fouriera.md",
+    "zagadnienia/1_Teoria_sygnalow_teoria/Sygnały wektorowe(todo).md",
+    "zagadnienia/1_Teoria_sygnalow_teoria/Splot.md",
+    "zagadnienia/1_Teoria_sygnalow_teoria/Próbkowanie sygnałów.md",
+    "zagadnienia/1_Teoria_sygnalow_teoria/Liczby zespolone.md",
+    "zagadnienia/1_Teoria_sygnalow_teoria/Laplace.md",
+    "zagadnienia/1_Teoria_sygnalow_teoria/Filtry analogowe (todo).md",
+    "zagadnienia/1_Teoria_sygnalow_teoria/delta Diraca.md",
+    "zagadnienia/1_Teoria_sygnalow_teoria/Analiza częstotliwościowa sygnałów analogowych.md",
+    "zagadnienia/1_Teoria_sygnalow_teoria/xEiT_1_TS.pdf",
+    "bachlor_exam/2_CPS_pytania/xEiT_2_CPS-3.pdf",
+    "bachlor_exam/8_TC_MP_pytania/assets/Pasted image 20251116163439.png",
+    "bachlor_exam/8_TC_MP_pytania/assets/Pasted image 20251116163420.png",
+    "bachlor_exam/8_TC_MP_pytania/assets/Pasted image 20251116163323.png",
+    "bachlor_exam/8_TC_MP_pytania/assets/Pasted image 20251116163243.png",
+    "bachlor_exam/8_TC_MP_pytania/assets/Pasted image 20251116163230.png",
+    "bachlor_exam/8_TC_MP_pytania/assets/Pasted image 20251116163120.png",
+    "bachlor_exam/8_TC_MP_pytania/assets/Pasted image 20251116161852.png",
+    "bachlor_exam/8_TC_MP_pytania/assets/Pasted image 20251116161713.png",
+    "bachlor_exam/8_TC_MP_pytania/assets/Pasted image 20251116161632.png",
+    "bachlor_exam/8_TC_MP_pytania/assets/Pasted image 20251116161551.png",
     "Untitled.canvas",
     "studies/Untitled.canvas"
   ]

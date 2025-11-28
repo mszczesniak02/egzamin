@@ -8,77 +8,14 @@
   "collapse-color-groups": false,
   "colorGroups": [
     {
-      "query": "path:ideas  ",
-      "color": {
-        "a": 1,
-        "rgb": 16711842
-      }
-    },
-    {
-      "query": "path:studies/bachlor_exam/1_Teoria_sygnalow  ",
-      "color": {
-        "a": 1,
-        "rgb": 14725458
-      }
-    },
-    {
-      "query": "path:studies/bachlor_exam/2_CPS  ",
-      "color": {
-        "a": 1,
-        "rgb": 12101632
-      }
-    },
-    {
-      "query": "path:studies/bachlor_exam/3_EE_AUE  ",
-      "color": {
-        "a": 1,
-        "rgb": 14288657
-      }
-    },
-    {
-      "query": "path:studies/bachlor_exam/4_SIS  ",
-      "color": {
-        "a": 1,
-        "rgb": 13326347
-      }
-    },
-    {
-      "query": "path:studies/bachlor_exam/5_SIeci_komputerowe  ",
-      "color": {
-        "a": 1,
-        "rgb": 5419488
-      }
-    },
-    {
-      "query": "path:studies/bachlor_exam/6_metodyka_programowania  ",
-      "color": {
-        "a": 1,
-        "rgb": 5395168
-      }
-    },
-    {
-      "query": "path:studies/bachlor_exam/7_Jezyki_programowania  ",
-      "color": {
-        "a": 1,
-        "rgb": 11621088
-      }
-    },
-    {
-      "query": "path:studies/bachlor_exam/8_TC_MP  ",
-      "color": {
-        "a": 1,
-        "rgb": 14701233
-      }
-    },
-    {
-      "query": "path:studies/bachlor_exam/9_RF  ",
+      "query": "path:bachlor_exam ",
       "color": {
         "a": 1,
         "rgb": 14701138
       }
     }
   ],
-  "collapse-display": true,
+  "collapse-display": false,
   "showArrow": true,
   "textFadeMultiplier": 0,
   "nodeSizeMultiplier": 1,
@@ -88,6 +25,6 @@
   "repelStrength": 11.9791666666667,
   "linkStrength": 0.984375,
   "linkDistance": 170,
-  "scale": 1.0083231186162955,
+  "scale": 0.3471971805282169,
   "close": false
 }
