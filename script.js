@@ -284,45 +284,40 @@ async function fetchQuestions() {
     statusEl.textContent = "Łączenie z serwerem...";
 
     try {
-        // 1. Get directory listing of ../pytania/
-        // Note: This relies on the web server having directory listing enabled (default for python http.server)
-        const response = await fetch('pytania/');
+        // Pobierz listę plików JSON z pytania_json/
+        const response = await fetch('pytania_json/');
         if (!response.ok) throw new Error(`Błąd sieci: ${response.status}`);
-        
+
         const text = await response.text();
-        
-        // 2. Parse HTML to find .md files
-        // Python http.server generates links like <a href="filename.md">filename.md</a>
         const parser = new DOMParser();
         const doc = parser.parseFromString(text, 'text/html');
         const links = Array.from(doc.querySelectorAll('a'));
-        
-        const mdFiles = links
+        const jsonFiles = links
             .map(a => a.getAttribute('href'))
-            .filter(href => href && href.endsWith('.md'));
+            .filter(href => href && href.endsWith('.json'));
 
-        if (mdFiles.length === 0) {
-            statusEl.textContent = "Nie znaleziono plików .md w folderze ../pytania/";
+        if (jsonFiles.length === 0) {
+            statusEl.textContent = "Nie znaleziono plików .json w folderze pytania_json/";
             return;
         }
 
-        statusEl.textContent = `Znaleziono ${mdFiles.length} plików. Pobieranie...`;
+        statusEl.textContent = `Znaleziono ${jsonFiles.length} plików. Pobieranie...`;
 
         let loadedCount = 0;
         ALL_QUESTIONS = {};
 
-        for (const filename of mdFiles) {
-            // Fetch individual file content with cache busting
-            const fileRes = await fetch(`pytania/${filename}?t=${Date.now()}`);
+        for (const filename of jsonFiles) {
+            // Fetch individual JSON file
+            const fileRes = await fetch(`pytania_json/${filename}?t=${Date.now()}`);
             if (fileRes.ok) {
-                const content = await fileRes.text();
-                const questions = parseMarkdown(content);
-                
+                const jsonData = await fileRes.json();
+                const questions = parseMarkdown(jsonData.content);
+
                 console.log(`Parsed ${filename}: ${questions.length} questions`);
 
                 if (questions.length > 0) {
                     // Use filename without extension as category name
-                    const categoryName = decodeURIComponent(filename.replace('.md', ''));
+                    const categoryName = decodeURIComponent(filename.replace('.json', ''));
                     ALL_QUESTIONS[categoryName] = questions;
                     loadedCount++;
                 } else {
