@@ -1,12 +1,14 @@
 
->[!warning] # test 1
->>[!danger] ## test 1 
->>>[!question]- #### test 1
->>>>[!quote] test 1
+
+>[!warning] # Funkcje w programowaniu
+>>[!danger] ## rola i struktura, rekurencja, przekazywanie argumentów
+>>>[!question]- #### Funkcja w programowaniu (Witkowski)
+>>>>[!quote] Odpowiedź
 >>
->>>[!question]- #### test 2
->>>>[!quote] test 2
->
->>[!danger] ## test 3
->>>[!question]- #### test 4
->>>>[!quote] Odpowiedź test 4
+>>>[!question]- #### Funkcja w programowaniu, co robi i po co, czy może mieć nieograniczoną liczbę argumentów (Grochot)
+>>>>[!quote] Odpowiedź
+>>
+>>>[!question]- #### Funckje- co to jak dziala, konstrukcja, argumenty, return (czy istnieje funkcja z niskonczona ilością argumentów, funckje anonimowe) (Grochot)
+>>>>[!quote] Odpowiedź
+
+
