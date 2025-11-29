@@ -4,25 +4,138 @@
     "type": "split",
     "children": [
       {
-        "id": "5d6293b9996011a1",
+        "id": "17f6d0e87df03f90",
         "type": "tabs",
         "children": [
           {
-            "id": "9966a096ce8224c4",
+            "id": "dcbc209d0fcc1a93",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "pytania/1_Teoria_sygnalow.md",
+                "file": "pytania/4_SIS.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "1_Teoria_sygnalow"
+              "title": "4_SIS"
+            }
+          },
+          {
+            "id": "1cb287465c05d2a9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "pytania/8_TC_MP.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "8_TC_MP"
+            }
+          },
+          {
+            "id": "84b86b132b7bb914",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "pytania/6_metodyka_programowania.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "6_metodyka_programowania"
+            }
+          },
+          {
+            "id": "41c4e922e262bf7a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "pytania/9_RF.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "9_RF"
             }
           }
-        ]
+        ],
+        "currentTab": 2
+      },
+      {
+        "id": "5033f807a4cd78d0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "53d810caa19fd583",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "zagadnienia/8_TC_MP_teoria/Cyfrówka.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "Cyfrówka"
+            }
+          },
+          {
+            "id": "0d620848a9f2b7a5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "zagadnienia/6_metodyka_programowania_teoria/Metodyki Programowania.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "Metodyki Programowania"
+            }
+          },
+          {
+            "id": "f00f27e7af14fb85",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "zagadnienia/9_RF_teoria/Mikrofale.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "Mikrofale"
+            }
+          },
+          {
+            "id": "6d750d5ce9512c1d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "zagadnienia/1_Teoria_sygnalow_teoria/TEORIA SYGNAŁÓW.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "TEORIA SYGNAŁÓW"
+            }
+          }
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -164,11 +277,31 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "9966a096ce8224c4",
+  "active": "84b86b132b7bb914",
   "lastOpenFiles": [
+    "zagadnienia/6_metodyka_programowania_teoria/Metodyki Programowania.md",
+    "pytania/6_metodyka_programowania.md",
+    "pytania/9_RF.md",
+    "zagadnienia/9_RF_teoria/Mikrofale.md",
+    "pytania/8_TC_MP.md",
+    "zagadnienia/9_RF_teoria/xEiT_9_RF-1.pdf",
+    "pytania/3_EE_AUE.md",
+    "zagadnienia/3_EE_AUE_teoria/EE_AUE.md",
     "pytania/2_CPS.md",
-    "pytania/4_SIS.md",
     "pytania/1_Teoria_sygnalow.md",
+    "zagadnienia/2_CPS_teoria/CPS.md",
+    "zagadnienia/8_TC_MP_teoria/Cyfrówka.md",
+    "pytania/4_SIS.md",
+    "pytania/5_SIeci_komputerowe.md",
+    "Untitled.md",
+    "zagadnienia/1_Teoria_sygnalow_teoria/TEORIA SYGNAŁÓW.md",
+    "zagadnienia/8_TC_MP_teoria/latch.md",
+    "zagadnienia/8_TC_MP_teoria/kody_danych.md",
+    "zagadnienia/8_TC_MP_teoria/Bramki logiczne i układy kombinacyjne.md",
+    "zagadnienia/7_Jezyki_programowania_teoria/JEZYKI_PROGRAMOWANIA.md",
+    "zagadnienia/7_Jezyki_programowania_teoria/c&cpp.md",
+    "zagadnienia/6_metodyka_programowania_teoria/Algorytmy i ich analiza.md",
+    "zagadnienia/6_metodyka_programowania_teoria/Struktury danych.md",
     "readme.md",
     "pytania_json/3_EE_AUE.json",
     "pytania_json/8_TC_MP.json",
@@ -179,32 +312,13 @@
     "pytania_json/7_Jezyki_programowania.json",
     "pytania_json/2_CPS.json",
     "pytania_json/1_Teoria_sygnalow.json",
-    "pytania_json",
-    "pytania/9_RF.md",
-    "pytania/8_TC_MP.md",
     "pytania/7_Jezyki_programowania.md",
-    "pytania/6_metodyka_programowania.md",
-    "pytania/5_SIeci_komputerowe.md",
-    "pytania/3_EE_AUE.md",
     "docs/pytania/1_Teoria_sygnalow.md",
     "docs/pytania/9_RF.md",
-    "docs/pytania/8_TC_MP.md",
-    "docs/pytania/7_Jezyki_programowania.md",
-    "docs/pytania/6_metodyka_programowania.md",
-    "docs/pytania/5_SIeci_komputerowe.md",
-    "docs/pytania/4_SIS.md",
-    "docs/pytania/3_EE_AUE.md",
-    "docs/pytania/2_CPS.md",
     "assets/obs_tut.gif",
     "assets/index.gif",
     "assets/obs_tut-ezgif.com-crop.gif",
     "assets/index-ezgif.com-resize.gif",
-    "maszynka.md",
-    "Templates/Pytanie.md",
-    "Templates/Kategoria.md",
-    "Templates/Zagadnienie.md",
-    "templates/snippets.md",
-    "zagadnienia/8_TC_MP_teoria/Cyfrówka.md",
     "bachlor_exam/8_TC_MP_pytania/assets/Pasted image 20251116163439.png",
     "bachlor_exam/8_TC_MP_pytania/assets/Pasted image 20251116163420.png",
     "bachlor_exam/8_TC_MP_pytania/assets/Pasted image 20251116163323.png",

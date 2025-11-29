@@ -1,13 +1,23 @@
 
->[!warning] # Zagadnienie 
->>[!danger] ## Kategoria
->>>[!question]- #### dokąd nocą tupta jeż
+
+>[!warning] # Delta Diraca, Próbkowanie
+>>[!danger] ## Twierdzenie Shannona, aliasing, transformaty fouriera
+>>>[!question]- #### Próbkowanie, delta Diraca, twierdzenie Shannona, alissing (Grochot)
+>>>>[!quote] Odpowiedź
+
+
+>[!warning] # Transformata Fouriera, splot
+>>[!danger] ##  FT, FFT, DFT, splot
+>>>[!question]- #### transformata Fouriera, co to, po co, jak wygląda sygnał po (Krehlik)
+>>>>[!quote] Odpowiedź
+
+
+>[!warning] # Próbkowanie 
+>>[!danger] ## Aliasing, twierdzenie Shannona
+>>>[!question]- #### aliasing (Krehlik)
 >>>>[!quote] Odpowiedź
 >>
->>>[!question]- #### gdzie wieje wiatr
->>>>[!quote] Odpowiedź
->>
->>>[!question]- #### czy wiesz co to bin chilin
+>>>[!question]- #### Aliasing (Frankowski)
 >>>>[!quote] Odpowiedź
 
 

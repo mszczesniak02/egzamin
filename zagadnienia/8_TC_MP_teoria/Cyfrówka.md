@@ -55,8 +55,8 @@
 > Rodzaje instrukcji maszynowych i tryby adresowania
 
 >[!info] # [[kody_danych | Reprezentacja i kodowanie danych]]
-> [[kody_danych#Systemy_liczbowe|Systemy liczbowe: binarny, ósemkowy, szesnastkowy]]
-> [[kody_danych#Znak-moduł (sign-magnitude) ZM|Reprezentacja liczb w systemach znak-moduł, U2, z przesunięciem (offset)]]
+> [[kody_danych#^1025bc|Systemy liczbowe: binarny, ósemkowy, szesnastkowy]]
+> [[kody_danych#^fe173a|Reprezentacja liczb w systemach znak-moduł, U2, z przesunięciem (offset)]]
 > [[kody_danych#BCD - binary coded decimal|Reprezentacje specjalne (BCD, kod Graya)]]
 > [[kody_danych#Konwersja między systemami|Konwersje pomiędzy systemami liczbowymi]]
 > [[kody_danych#Błędy systemów liczbowych|Błędy zaokrągleń i przepełnienia]]
