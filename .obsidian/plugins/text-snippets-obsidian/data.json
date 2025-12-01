@@ -1,0 +1,26 @@
+{
+  "snippets_file": "@a: $nl$>[!warning] # Zagadnienie$end$$nl$>>[!danger] ## Kategoria$nl$>>>[!question]- #### Pytanie$nl$>>>>[!quote] Odpowiedź\n\n\n@z : $nl$>[!warning] # Zagadnienie$end$\n\n@za : $nl$>[!warning] # Zagadnienie$end$$nl$>>[!danger] ## Kategoria$nl$>>>[!question]- #### Pytanie$nl$>>>>[!quote] Odpowiedź\n\n@k : >$nl$>>[!danger] ## Kategoria$end$\n@ka : >$nl$>>[!danger] ## Kategoria$end$$nl$>>>[!question]- #### Pytanie$nl$>>>>[!quote] Odpowiedź$end$\n\n\n@p : >>$nl$>>>[!question]- #### Pytanie$end$\n@pa : >>$nl$>>>[!question]- #### Pytanie$end$$nl$>>>>[!quote] Odpowiedź$end$\n\n@o : >>>$nl$>>>>[!quote] Odpowiedź$end$\n\n@pyt :$nl$>>$nl$>>>[!question]- #### Pytanie $end$$nl$>>>>[!quote] Odpowiedx \n\n@1 : >\n@2 : >>\n@3 : >>>\n@4 : >>>>",
+  "snippets": [
+    "@a: $nl$>[!warning] # Zagadnienie$end$$nl$>>[!danger] ## Kategoria$nl$>>>[!question]- #### Pytanie$nl$>>>>[!quote] Odpowiedź",
+    "@z : $nl$>[!warning] # Zagadnienie$end$",
+    "@za : $nl$>[!warning] # Zagadnienie$end$$nl$>>[!danger] ## Kategoria$nl$>>>[!question]- #### Pytanie$nl$>>>>[!quote] Odpowiedź",
+    "@k : >$nl$>>[!danger] ## Kategoria$end$",
+    "@ka : >$nl$>>[!danger] ## Kategoria$end$$nl$>>>[!question]- #### Pytanie$nl$>>>>[!quote] Odpowiedź$end$",
+    "@p : >>$nl$>>>[!question]- #### Pytanie$end$",
+    "@pa : >>$nl$>>>[!question]- #### Pytanie$end$$nl$>>>>[!quote] Odpowiedź$end$",
+    "@o : >>>$nl$>>>>[!quote] Odpowiedź$end$",
+    "@pyt :$nl$>>$nl$>>>[!question]- #### Pytanie $end$$nl$>>>>[!quote] Odpowiedx ",
+    "@1 : >",
+    "@2 : >>",
+    "@3 : >>>",
+    "@4 : >>>>"
+  ],
+  "endSymbol": "$end$",
+  "newlineSymbol": "$nl$",
+  "stopSymbol": "$tb$",
+  "pasteSymbol": "$pst$",
+  "useTab": true,
+  "useSpace": false,
+  "wordDelimiters": "$()[]{}<>,.!?;:'\"\\/",
+  "isWYSIWYG": true
+}

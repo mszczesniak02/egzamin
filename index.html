@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egzamin Quiz</title>
+    <link rel="stylesheet" href="style.css?v=4">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Egzamin Quiz</h1>
+        <div id="stats-bar">
+        <span>Punkty: <strong id="stat-session">0/15</strong></span>
+    </div>
+
+        <!-- Setup View -->
+        <div id="setup-view" class="view">
+            <p id="loading-status">Ładowanie bazy pytań...</p>
+        </div>
+
+        <!-- Category Selection View -->
+        <div id="category-view" class="view hidden">
+            <h2>Odrzuć jedną kategorię</h2>
+            <p>Wylosowano 4 kategorie. Kliknij jedną, aby ją odrzucić.</p>
+            <div id="categories-container" class="cards-grid"></div>
+        </div>
+
+        <!-- Questions View -->
+        <div id="questions-view" class="view hidden">
+            <h2>Pytania</h2>
+            <div id="questions-container"></div>
+            <button id="restart-btn" class="btn">Nowe Losowanie</button>
+        </div>
+    </div>
+
+    <script src="animations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

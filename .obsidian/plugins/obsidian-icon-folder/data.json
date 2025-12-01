@@ -6,10 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
-      "👟",
-      "LiPaintRoller",
-      "🎰",
-      "LiBook"
+      "LiMessageCircleQuestion",
+      "LiInfo",
+      "LiDock",
+      "🖼",
+      "LiAirplay"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -34,5 +35,10 @@
     "useInternalPlugins": false
   },
   "ideas/books": "LiBook",
-  "ideas/paintings": "LiPaintRoller"
+  "ideas/paintings": "LiPaintRoller",
+  "zagadnienia": "LiAngry",
+  "prezentacje": "LiAirplay",
+  "assets": "🖼",
+  "readme.md": "LiInfo",
+  "pytania": "LiMessageCircleQuestion"
 }

@@ -6,6 +6,6 @@
   "calloutDetection": {
     "obsidian": true,
     "theme": true,
-    "snippet": true
+    "snippet": false
   }
 }

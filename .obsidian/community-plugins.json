@@ -1,9 +1,5 @@
 [
-  "obsidian-git",
   "obsidian-latex-suite",
-  "omnisearch",
-  "highlightr-plugin",
-  "obsidian-orthography",
   "obsidian-excalidraw-plugin",
   "code-emitter",
   "dataview",
@@ -11,5 +7,7 @@
   "table-editor-obsidian",
   "callout-manager",
   "obsidian-style-settings",
-  "obsidian-columns"
+  "obsidian-columns",
+  "templater-obsidian",
+  "text-snippets-obsidian"
 ]

@@ -38,8 +38,6 @@
   "overrideObsidianFontSize": false,
   "dynamicStyling": "colorful",
   "isLeftHanded": false,
-  "desktopUIMode": "tray",
-  "tabletUIMode": "compact",
   "iframeMatchExcalidrawTheme": true,
   "matchTheme": false,
   "matchThemeAlways": false,
@@ -109,7 +107,7 @@
   "library2": {
     "type": "excalidrawlib",
     "version": 2,
-    "source": "https://github.com/zsviczian/obsidian-excalidraw-plugin/releases/tag/2.17.1",
+    "source": "https://github.com/zsviczian/obsidian-excalidraw-plugin/releases/tag/2.15.3",
     "libraryItems": []
   },
   "imageElementNotice": true,
@@ -120,7 +118,8 @@
   "mdBorderColor": "Black",
   "mdCSS": "",
   "scriptEngineSettings": {},
-  "previousRelease": "2.17.1",
+  "defaultTrayMode": true,
+  "previousRelease": "2.15.3",
   "showReleaseNotes": true,
   "compareManifestToPluginVersion": true,
   "showNewVersionNotification": true,
@@ -809,7 +808,5 @@
     "customPaperColor": "#ffffff",
     "alignment": "center",
     "margin": "normal"
-  },
-  "disableContextMenu": false,
-  "defaultTrayMode": true
+  }
 }

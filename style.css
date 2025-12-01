@@ -1,0 +1,284 @@
+:root {
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --text-color: #e0e0e0;
+    --accent-color: #3b82f6;
+    --danger-color: #ef4444;
+    --warning-color: #f59e0b;
+    --success-color: #10b981;
+    --border-radius: 12px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.view {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Setup View */
+#setup-view {
+    text-align: center;
+    margin-top: 50px; /* Reduced top margin */
+}
+
+#stats-bar {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0 auto 20px auto; /* Center horizontally */
+    font-size: 1.2rem;
+    background-color: var(--card-bg);
+    padding: 15px;
+    border-radius: var(--border-radius);
+    width: fit-content; /* Only take necessary width */
+}
+
+#stats-bar span {
+    color: var(--text-color);
+}
+
+#stats-bar b {
+    color: var(--accent-color);
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.file-upload-btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 12px 24px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.file-upload-btn:hover {
+    transform: translateY(-2px);
+    background-color: #2563eb;
+}
+
+/* Cards Grid */
+.cards-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.category-card {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.2s;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+    min-height: 60px; /* Ensure consistent height */
+}
+
+.category-card:hover {
+    border-color: var(--danger-color);
+    background-color: rgba(239, 68, 68, 0.1);
+}
+
+/* Question Cards */
+.question-card {
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.callout {
+    padding: 15px;
+    border-left: 4px solid;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.callout-topic {
+    border-color: var(--warning-color);
+}
+.callout-topic::before {
+    content: "Zagadnienie";
+    display: block;
+    font-size: 0.8rem;
+    color: var(--warning-color);
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.callout-category {
+    border-color: var(--danger-color);
+}
+.callout-category::before {
+    content: "Kategoria";
+    display: block;
+    font-size: 0.8rem;
+    color: var(--danger-color);
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.callout-question {
+    border-color: var(--accent-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.callout-question::before {
+    content: "Pytanie";
+    display: block;
+    font-size: 0.8rem;
+    color: var(--accent-color);
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.callout-answer {
+    border-color: var(--success-color);
+    margin-top: 20px;
+    white-space: pre-wrap; /* Preserve newlines */
+}
+.callout-answer::before {
+    content: "Odpowiedź";
+    display: block;
+    font-size: 0.8rem;
+    color: var(--success-color);
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.btn {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.btn:hover {
+    background-color: #2563eb;
+}
+
+.reveal-btn {
+    width: 100%;
+    margin-top: 10px;
+    background-color: #4b5563;
+}
+.reveal-btn:hover {
+    background-color: #374151;
+}
+
+#restart-btn {
+    display: block;
+    margin: 40px auto;
+    width: 200px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.meta-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.meta-row .callout {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+/* Custom Checkbox */
+.mark-done-btn {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.mark-done-btn input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    background-color: #333;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: transparent;
+    transition: all 0.2s;
+    border: 2px solid #555;
+}
+
+.mark-done-btn:hover .checkmark {
+    background-color: #444;
+}
+
+.mark-done-btn input:checked ~ .checkmark {
+    background-color: var(--success-color);
+    border-color: var(--success-color);
+    color: white;
+}
+
+/* Card Done State */
+.card-done {
+    opacity: 0.6;
+    border: 1px solid var(--success-color);
+}
