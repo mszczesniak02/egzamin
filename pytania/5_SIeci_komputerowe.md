@@ -1,7 +1,7 @@
 > [!warning] # 1. Protokoły przewodowych sieci lokalnych (Ethernet, IEEE 802.3).
 >> [!danger] ## 1.1. Zasada realizacji transmisji ramek Ethernet.
 >>> [!question]- #### Pytanie
->>>> [!quote] Odpowiedź
+>>>> [!quote] Odpowiedź TEST TEST TEST 
 >
 >> [!danger] ## 1.2. Metoda dostępu do medium CSMA/CD.
 >>> [!question]- #### Pytanie
