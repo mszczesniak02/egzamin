@@ -70,7 +70,6 @@ function checkSessionComplete() {
         const totalQuestions = document.querySelectorAll('.question-card').length;
         
         console.log('Session check:', {
-            answeredCount,
             totalQuestions,
             points: SESSION_STATS.points,
             maxPoints: SESSION_STATS.maxPoints,
@@ -115,8 +114,12 @@ function startQuiz() {
         return;
     }
 
-    // Shuffle and take 4
-    const shuffled = allCategories.sort(() => 0.5 - Math.random());
+    // Shuffle using Fisher-Yates algorithm
+    const shuffled = [...allCategories]; // Create a copy
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
     SELECTED_CATEGORIES = shuffled.slice(0, 4);
 
     renderCategorySelection();
@@ -170,6 +173,10 @@ function renderQuestionCard(q, container) {
     // Clean up filename for display or use alias
     const subjectName = SUBJECT_ALIASES[q.categoryName] || q.categoryName.replace(/_/g, ' ');
 
+    // Render Markdown and LaTeX
+    const questionHtml = renderContent(q.question);
+    const answerHtml = renderContent(q.answer);
+
     card.innerHTML = `
         <h3 style="margin-top:0; color:var(--text-color); border-bottom:1px solid #333; padding-bottom:10px;">
             Przedmiot: ${escapeHtml(subjectName)}
@@ -178,9 +185,9 @@ function renderQuestionCard(q, container) {
             <div class="callout callout-topic">${escapeHtml(q.topic || 'Bez zagadnienia')}</div>
             <div class="callout callout-category">${escapeHtml(q.subcategory || 'Bez kategorii')}</div>
         </div>
-        <div class="callout callout-question">${escapeHtml(q.question)}</div>
+        <div class="callout callout-question">${questionHtml}</div>
         <button class="btn reveal-btn">Pokaż odpowiedź</button>
-        <div class="callout callout-answer hidden">${escapeHtml(q.answer)}</div>
+        <div class="callout callout-answer hidden">${answerHtml}</div>
         
         <div class="known-section hidden" style="margin-top: 15px;">
             <div style="background-color: rgba(16, 185, 129, 0.1); border-left: 4px solid #10b981; padding: 15px; border-radius: 8px;">
@@ -253,7 +260,54 @@ function renderQuestionCard(q, container) {
         };
     });
 
+    // Render LaTeX if available
+    if (window.renderMathInElement) {
+        renderMathInElement(card, {
+            delimiters: [
+                {left: '$$', right: '$$', display: true},
+                {left: '$', right: '$', display: false}
+            ],
+            throwOnError: false
+        });
+    }
+
     container.appendChild(card);
+}
+
+function renderContent(text) {
+    if (!text) return '';
+    
+    // Protect LaTeX blocks $$...$$ and $...$
+    const mathBlocks = [];
+    // Replace display math $$...$$ first
+    let protectedText = text.replace(/\$\$([\s\S]*?)\$\$/g, (match) => {
+        mathBlocks.push(match);
+        return `%%%MATHBLOCK_DISPLAY_${mathBlocks.length - 1}%%%`;
+    });
+    
+    // Replace inline math $...$
+    // We use a regex that avoids matching empty $$, but captures $...$
+    // It looks for a $ that is NOT followed by another $, content, and a closing $
+    protectedText = protectedText.replace(/\$([^$]+?)\$/g, (match) => {
+        mathBlocks.push(match);
+        return `%%%MATHBLOCK_INLINE_${mathBlocks.length - 1}%%%`;
+    });
+    
+    // Parse Markdown (if marked is available)
+    let html = text;
+    if (typeof marked !== 'undefined') {
+        html = marked.parse(protectedText);
+    } else {
+        // Fallback if marked not loaded
+        html = escapeHtml(protectedText).replace(/\n/g, '<br>');
+    }
+    
+    // Restore LaTeX
+    html = html.replace(/%%%MATHBLOCK_(DISPLAY|INLINE)_(\d+)%%%/g, (match, type, id) => {
+        return mathBlocks[id];
+    });
+    
+    return html;
 }
 
 // Escape function remains unchanged
@@ -336,23 +390,30 @@ function parseMarkdown(content) {
     let currentAnswerLines = [];
     let collectingAnswer = false;
 
-    // Regex patterns
-    const topicRegex = /^>\[!warning\]\s*#\s*(.*)/;
-    const subcatRegex = /^>>\[!danger\]\s*(?:##)?\s*(.*)/;
-    const questionRegex = /^>>>\[!question\](?:-)?\s*(?:####|###)?\s*(.*)/;
-    const answerStartRegex = /^>>>>\[!quote\]\s*(.*)/;
-    const anyTagRegex = /^>+\[!/;
+    // Regex patterns - flexible with '>' count and spacing
+    // Matches > [!tag], >> [!tag], >[!tag], etc.
+    const topicRegex = /^>+\s*\[!warning\]\s*#?\s*(.*)/;
+    const subcatRegex = /^>+\s*\[!danger\]\s*(?:##)?\s*(.*)/;
+    const questionRegex = /^>+\s*\[!question\](?:-)?\s*(?:####|###)?\s*(.*)/;
+    const answerStartRegex = /^>+\s*\[!quote\]\s*(.*)/;
 
     const saveCurrentQuestion = () => {
         if (currentQuestion && currentAnswerLines.length > 0) {
-            questions.push({
-                topic: currentTopic,
-                subcategory: currentSubcategory,
-                question: currentQuestion,
-                answer: currentAnswerLines.join('\n').trim()
-            });
+            const answerText = currentAnswerLines.join('\n').trim();
+            // Filter out placeholder answers (case insensitive)
+            const isPlaceholder = /^(odpowiedź|odpowiedz|brak)\.?$/i.test(answerText);
+
+            if (answerText.length > 0 && !isPlaceholder) {
+                questions.push({
+                    topic: currentTopic,
+                    subcategory: currentSubcategory,
+                    question: currentQuestion,
+                    answer: answerText
+                });
+            }
             currentAnswerLines = [];
             currentQuestion = null;
+            collectingAnswer = false;
         }
     };
 
@@ -362,6 +423,7 @@ function parseMarkdown(content) {
         // Topic
         const topicMatch = line.match(topicRegex);
         if (topicMatch) {
+            saveCurrentQuestion();
             currentTopic = topicMatch[1].trim();
             continue;
         }
@@ -369,6 +431,7 @@ function parseMarkdown(content) {
         // Subcategory
         const subcatMatch = line.match(subcatRegex);
         if (subcatMatch) {
+            saveCurrentQuestion();
             currentSubcategory = subcatMatch[1].trim();
             continue;
         }
@@ -393,21 +456,15 @@ function parseMarkdown(content) {
 
         // Answer Continuation
         if (collectingAnswer) {
-            // Stop on empty line or line with only '>' characters (hierarchy spacers)
-            if (line === '' || /^[>]+$/.test(line)) {
+            // Check if line starts with one or more '>'
+            if (/^>+/.test(line)) {
+                // Remove all leading '>' characters and optional space
+                const cleanLine = line.replace(/^>+\s?/, '');
+                currentAnswerLines.push(cleanLine);
+            } else {
+                // If line doesn't start with '>', it's not part of the answer block
                 collectingAnswer = false;
-                continue;
             }
-
-            // Check if we hit a new tag (redundant if caught above, but safe)
-            if (anyTagRegex.test(line)) {
-                collectingAnswer = false;
-                continue; 
-            }
-
-            // It is answer text. Remove leading >>>> if present
-            const cleanLine = line.replace(/^>>>>\s?/, '');
-            currentAnswerLines.push(cleanLine);
         }
     }
     saveCurrentQuestion();
