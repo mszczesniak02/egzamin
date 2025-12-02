@@ -70,7 +70,6 @@ function checkSessionComplete() {
         const totalQuestions = document.querySelectorAll('.question-card').length;
         
         console.log('Session check:', {
-            answeredCount,Rejestry w mikroprocesorze - jakie są i do czego służą (Jamro)
             totalQuestions,
             points: SESSION_STATS.points,
             maxPoints: SESSION_STATS.maxPoints,
