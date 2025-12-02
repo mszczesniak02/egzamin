@@ -62,7 +62,29 @@ Transformata falkowa pokazuje niższe częstotliwości jako dłuższe czasowo sy
 ### #widmo
   ![[Pasted image 20251013132429.png]]
 
+1
+# 12as 3 d
 
+>[!warning] # Zagadnienie 1
+>>[!danger] ## Kategoria 2
+>>>[!question]- #### Pytanie 3
+>>>>[!quote] Odpowiedź 
+>
+>>[!danger] ## Kategoria
+>>>[!question]- #### Pytanie
+>>>>[!quote] Odpowiedź$end$
+>>
+>>>[!question]- #### Pytanie
+>>>>[!quote] Odpowiedź$end$
+2
+3
+4
+67
+
+>
+>>[!danger] ## Kategoria
+>>>[!question]- #### Pytanie
+>>>>[!quote] Odpowiedź$end$
 
 [^1]: https://en.wikipedia.org/wiki/Short-time_Fourier_transform
 	
