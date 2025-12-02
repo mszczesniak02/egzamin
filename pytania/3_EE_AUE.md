@@ -1,66 +1,44 @@
 
-
->[!warning] # Regulartory napięcia
->>[!danger] ## Znaczenie modulacji PWM, filtracja LC, sprawność, tranzystir
->>>[!question]- #### Generatory LC - Colpittsa, Hartleya, Meissnera (Ostrowski)
->>>>[!quote] Odpowiedź
-
-
->[!warning] # Pętla synchronizacji fazowej PLL
->>[!danger] ## Schemat blokowy, powielanie, zakresy
->>>[!question]- #### PLL(Zastosowanie, z czego się składa, co to jest w ogóle) (Jamro)
->>>>[!quote] Odpowiedź
-
-
->[!warning] # Regulatory napięcia, wzmacniacz operacyjny
->>[!danger] ## Komparatory, schemat z WO, histereza
->>>[!question]- #### Nieliniowe wzmacniacze operacyjne, komparator i histereza (Jamro)
->>>>[!quote] Odpowiedź
-
-
-
->[!warning] # Wzmacniacz operacyjny, sprzężenie zwrotne
->>[!danger] ## Cel feedbacku, kiedy jest ujemne, stabilność
->>>[!question]- #### Sprzężenie zwrotne w układach, czym jest po co, jakie daje efekty. Wpływ na wzmocnienie, pasmo oraz jaki wpływ ma na pojemności i impedancje (efekt millera). Jak zbudowane są układy z wysoką impedancją na wejściu dzięki sprzężeniu zwrotnego i gdzie wpięty jest rezystor żeby to uzyskać (Kołodziej)
->>>>[!quote] Odpowiedź
-
-
->[!warning] # Dioda półprzewodnikowa 
->>[!danger] ## Złączone PN, temperatura w pólprzewodnikach, polaryzacja
->>>[!question]- #### Dioda, domieszkowanie, charakterystyka, przebiegi, co niszczy diodę  (Grechot)
->>>>[!quote] Odpowiedź
-
-
->[!warning] # Tranzystory
->>[!danger] ## Tranzystory bipolarne i unipolarne
->>>[!question]- #### BJT vs JFET i MOS, które używane do cyfrówki (Dziurdzia)
->>>>[!quote] Odpowiedź
->>
->>>[!question]- #### Model malosygnalowy- do czego służy, rysowanie i obliczanie parametrów (Krzak)
->>>>[!quote] Odpowiedź
-
-
-
 >[!warning] # Dioda półprzewodnikowa
 >>[!danger] ## Złączne PN, podstawowe użycia diody
 >>>[!question]- #### Diody, narysować prostownik jednopołówkowy (Krehlik)
->>>>[!quote] Odpowiedź
+>>>>[!quote] Dyfuzja nośników: elektrony z obszaru N i dziury z obszaru P dyfundują do środka złącza, gdzie rekombinują.Warstwa zaporowa (depletion region): powstaje obszar pozbawiony swobodnych nośników, z polem elektrycznym przeciwdziałającym dalszej dyfuzji.Polaryzacja:Przewodzenie (polaryzacja wprost): napięcie dodatnie na P względem N → warstwa zaporowa maleje → prąd płynie Zaporowa: napięcie ujemne na P względem N → warstwa zaporowa rośnie → prąd nie płynie. **Dioda prostownicza** Przewodzi prąd w jednym kierunku Prostowniki AC/DC, zasilacze**Dioda Zenera** Przewodzi wstecznie powyżej napięcia Zenera Stabilizacja napięcia, zabezpieczenia**Dioda LED** Emituje światło przy przewodzeniu Oświetlenie, sygnalizacja**Dioda Schottky’ego** Niskie napięcie przewodzenia, szybka Zasilacze impulsowe, RF**Dioda tunelowa** Efekt tunelowy, nieliniowa charakterystyka Oscylatory, układy mikrofalowe**Dioda lawinowa** Przewodzi przy przebiciu lawinowym Detektory, zabezpieczenia**Dioda PIN** Gruba warstwa nie domieszkowana (I) RF, mikrofalowe przełączniki**Fotodioda** Generuje prąd pod wpływem światła Czujniki światła, detektory optyczne
+>>>> 
+>>>> Prostownik jednopołówkowy do dioda która w jedną strone blokuje przepływ prądu, połączona szeregowo z rezystorem
 >>
 >>>[!question]- #### diody (Krzak)
->>>>[!quote] Odpowiedź
+>>>>[!quote] Dyfuzja nośników: elektrony z obszaru N i dziury z obszaru P dyfundują do środka złącza, gdzie rekombinują.Warstwa zaporowa (depletion region): powstaje obszar pozbawiony swobodnych nośników, z polem elektrycznym przeciwdziałającym dalszej dyfuzji.Polaryzacja:Przewodzenie (polaryzacja wprost): napięcie dodatnie na P względem N → warstwa zaporowa maleje → prąd płynie Zaporowa: napięcie ujemne na P względem N → warstwa zaporowa rośnie → prąd nie płynie. **Dioda prostownicza** Przewodzi prąd w jednym kierunku Prostowniki AC/DC, zasilacze**Dioda Zenera** Przewodzi wstecznie powyżej napięcia Zenera Stabilizacja napięcia, zabezpieczenia**Dioda LED** Emituje światło przy przewodzeniu Oświetlenie, sygnalizacja**Dioda Schottky’ego** Niskie napięcie przewodzenia, szybka Zasilacze impulsowe, RF**Dioda tunelowa** Efekt tunelowy, nieliniowa charakterystyka Oscylatory, układy mikrofalowe**Dioda lawinowa** Przewodzi przy przebiciu lawinowym Detektory, zabezpieczenia**Dioda PIN** Gruba warstwa nie domieszkowana (I) RF, mikrofalowe przełączniki**Fotodioda** Generuje prąd pod wpływem światła Czujniki światła, detektory optyczne
+>>>> 
+>>>>
 >>
 >>>[!question]- #### Przyczyny nieliniowości w układach elektronicznych (jak powstają, na co wpływają, widmo harmonicznych, THD) (Ziętek)
 >>>>[!quote] Odpowiedź
 >>
 >>>[!question]- #### na jakie elementy wpływa temperetura, na jakie parametry (Ziętek)
->>>>[!quote] Odpowiedź$end$
-
+>>>>[!quote] Na wszystkie elementy wpływa temperatura, w szczególności na półprzewodniki. 
+>>>> 
+>>>> Rezystory grzeją się, jako ich główna funkcja, czyli ograniczenie prądu, a zgromadzona w nich energia jest oddawana w postaci temperatury, zaleznośc R(t) = R_0 (1 + alfa(t-t_0)), gdzie r0 to nominalna rezystancja, alfa to wpsółczunnik materiałowy, a t_0 temperatura referencyjna dla metalu o wspolczunniku alfa
+>>>> MOSFETy - napięcie progowe V_T maleje wraz ze wzrotstem temperatury, im cieplej, łatwiej się włącza ( przy niższym V), rezustancja kanału rośnie ze wzrostem kanału, czyli spada ruchliwość (połączenie równoległe pozwoli równomiernie rozłożyć prąd między tranzystorami)
+>>>>BJT - Wzmocnienie prądowe wzrasta ze wzrostem temperatury (spada rezystancja im większa temperatura, im cieplej, tym lepiej przewodzi, ale większe prądy, więc się może spalić )
+>>>> Cewki i transformatory - indukcja nasycenia maleje ze wzrostem temperatury - przy osiągnięciu nasycenia. Wiedząc że V = L di/dt -> V/L = di/dt, czyli nagła zmiana L do spowoduje nieskończenie wielkie napięcie. Nagła zmiana może zajść, jeżeli przy dużej temperaturze  rdzeń się nasyci, spadnie drastycznie przenikalność w polu magnetycznym, co za tym idzie, cewka staje się drutem, bo L = N^2 * A * u/(L), gdzie u to przenikalność, N ilość zwojów, A powierzchnia, L długość. Więc może się odłożyć wielkie napięcie. 
+>>
+>>>[!question]- #### Dioda, domieszkowanie, charakterystyka, przebiegi, co niszczy diodę  (Grechot)
+>>>>[!quote] Dyfuzja nośników: elektrony z obszaru N i dziury z obszaru P dyfundują do środka złącza, gdzie rekombinują.Warstwa zaporowa (depletion region): powstaje obszar pozbawiony swobodnych nośników, z polem elektrycznym przeciwdziałającym dalszej dyfuzji.Polaryzacja:Przewodzenie (polaryzacja wprost): napięcie dodatnie na P względem N → warstwa zaporowa maleje → prąd płynie Zaporowa: napięcie ujemne na P względem N → warstwa zaporowa rośnie → prąd nie płynie. **Dioda prostownicza** Przewodzi prąd w jednym kierunku Prostowniki AC/DC, zasilacze**Dioda Zenera** Przewodzi wstecznie powyżej napięcia Zenera Stabilizacja napięcia, zabezpieczenia**Dioda LED** Emituje światło przy przewodzeniu Oświetlenie, sygnalizacja**Dioda Schottky’ego** Niskie napięcie przewodzenia, szybka Zasilacze impulsowe, RF**Dioda tunelowa** Efekt tunelowy, nieliniowa charakterystyka Oscylatory, układy mikrofalowe**Dioda lawinowa** Przewodzi przy przebiciu lawinowym Detektory, zabezpieczenia**Dioda PIN** Gruba warstwa nie domieszkowana (I) RF, mikrofalowe przełączniki**Fotodioda** Generuje prąd pod wpływem światła Czujniki światła, detektory optyczne
+>>>> 
+>>>> Diodę niszczy przebicie, czyli zbyt duże przyłożone napięcie, w polaryzacji zaporowej, przebicie sprawia lawinowy wzrost nośników, co za tym idzie wzrost prądu i ostatecznie temperatury bo prąd płynie.  
+>>>> Im większa temperatura półprzewodnika, tym mniejsza rezystancja, im mniejsza rezyustancja tym większy prąd, więc może się spalić.
 
 
 
 >[!warning] # Elementy elektroniczne
 >>[!danger] ## Elementy pasywne
 >>>[!question]- #### Ogniwa termoelektryczne Peltiera (Ziętek)
->>>>[!quote] Odpowiedź
+>>>>[!quote] Raz o tym słyszałem i nawet nie ze studiów, badziew
+>>>> Jest to układ elektroniczny, który za sprawą zjawiska termoelektrycznego (peltier i seeback) pozwala zamienić różnice temperatur na spadek napięcia. i odwrotnie, chłodzeni i grzanie sterowane napięciem. 
+>>>>  
+>>>> Po ogrzaniu jeden strony, elektrony zwiększają energię kinetyczną dyfundują w kierunku gradientu temperatury.  zwyższej do niższej 
+>>>> Gdy mówimy o wytwarzaniu napięcia zmianą tempratury, to efekt Seebecka, jeżeli odwrotnie, to efekt Peltiera.
+>>>> Moduł peltiera to połączone szeregowo przeciwne półprzewoniki w strukturze, pozwalające na tworzenie różnicy temperatur w oparciu o dostarczaną energię.
+
 
 
