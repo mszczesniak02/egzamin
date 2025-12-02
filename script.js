@@ -70,7 +70,7 @@ function checkSessionComplete() {
         const totalQuestions = document.querySelectorAll('.question-card').length;
         
         console.log('Session check:', {
-            answeredCount,
+            answeredCount,Rejestry w mikroprocesorze - jakie są i do czego służą (Jamro)
             totalQuestions,
             points: SESSION_STATS.points,
             maxPoints: SESSION_STATS.maxPoints,
@@ -115,8 +115,12 @@ function startQuiz() {
         return;
     }
 
-    // Shuffle and take 4
-    const shuffled = allCategories.sort(() => 0.5 - Math.random());
+    // Shuffle using Fisher-Yates algorithm
+    const shuffled = [...allCategories]; // Create a copy
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
     SELECTED_CATEGORIES = shuffled.slice(0, 4);
 
     renderCategorySelection();
