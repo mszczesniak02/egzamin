@@ -173,6 +173,10 @@ function renderQuestionCard(q, container) {
     // Clean up filename for display or use alias
     const subjectName = SUBJECT_ALIASES[q.categoryName] || q.categoryName.replace(/_/g, ' ');
 
+    // Render Markdown and LaTeX
+    const questionHtml = renderContent(q.question);
+    const answerHtml = renderContent(q.answer);
+
     card.innerHTML = `
         <h3 style="margin-top:0; color:var(--text-color); border-bottom:1px solid #333; padding-bottom:10px;">
             Przedmiot: ${escapeHtml(subjectName)}
@@ -181,9 +185,9 @@ function renderQuestionCard(q, container) {
             <div class="callout callout-topic">${escapeHtml(q.topic || 'Bez zagadnienia')}</div>
             <div class="callout callout-category">${escapeHtml(q.subcategory || 'Bez kategorii')}</div>
         </div>
-        <div class="callout callout-question">${escapeHtml(q.question)}</div>
+        <div class="callout callout-question">${questionHtml}</div>
         <button class="btn reveal-btn">Pokaż odpowiedź</button>
-        <div class="callout callout-answer hidden">${escapeHtml(q.answer)}</div>
+        <div class="callout callout-answer hidden">${answerHtml}</div>
         
         <div class="known-section hidden" style="margin-top: 15px;">
             <div style="background-color: rgba(16, 185, 129, 0.1); border-left: 4px solid #10b981; padding: 15px; border-radius: 8px;">
@@ -256,7 +260,54 @@ function renderQuestionCard(q, container) {
         };
     });
 
+    // Render LaTeX if available
+    if (window.renderMathInElement) {
+        renderMathInElement(card, {
+            delimiters: [
+                {left: '$$', right: '$$', display: true},
+                {left: '$', right: '$', display: false}
+            ],
+            throwOnError: false
+        });
+    }
+
     container.appendChild(card);
+}
+
+function renderContent(text) {
+    if (!text) return '';
+    
+    // Protect LaTeX blocks $$...$$ and $...$
+    const mathBlocks = [];
+    // Replace display math $$...$$ first
+    let protectedText = text.replace(/\$\$([\s\S]*?)\$\$/g, (match) => {
+        mathBlocks.push(match);
+        return `%%%MATHBLOCK_DISPLAY_${mathBlocks.length - 1}%%%`;
+    });
+    
+    // Replace inline math $...$
+    // We use a regex that avoids matching empty $$, but captures $...$
+    // It looks for a $ that is NOT followed by another $, content, and a closing $
+    protectedText = protectedText.replace(/\$([^$]+?)\$/g, (match) => {
+        mathBlocks.push(match);
+        return `%%%MATHBLOCK_INLINE_${mathBlocks.length - 1}%%%`;
+    });
+    
+    // Parse Markdown (if marked is available)
+    let html = text;
+    if (typeof marked !== 'undefined') {
+        html = marked.parse(protectedText);
+    } else {
+        // Fallback if marked not loaded
+        html = escapeHtml(protectedText).replace(/\n/g, '<br>');
+    }
+    
+    // Restore LaTeX
+    html = html.replace(/%%%MATHBLOCK_(DISPLAY|INLINE)_(\d+)%%%/g, (match, type, id) => {
+        return mathBlocks[id];
+    });
+    
+    return html;
 }
 
 // Escape function remains unchanged
@@ -348,12 +399,18 @@ function parseMarkdown(content) {
 
     const saveCurrentQuestion = () => {
         if (currentQuestion && currentAnswerLines.length > 0) {
-            questions.push({
-                topic: currentTopic,
-                subcategory: currentSubcategory,
-                question: currentQuestion,
-                answer: currentAnswerLines.join('\n').trim()
-            });
+            const answerText = currentAnswerLines.join('\n').trim();
+            // Filter out placeholder answers (case insensitive)
+            const isPlaceholder = /^(odpowiedź|odpowiedz|brak)\.?$/i.test(answerText);
+
+            if (answerText.length > 0 && !isPlaceholder) {
+                questions.push({
+                    topic: currentTopic,
+                    subcategory: currentSubcategory,
+                    question: currentQuestion,
+                    answer: answerText
+                });
+            }
             currentAnswerLines = [];
             currentQuestion = null;
             collectingAnswer = false;
