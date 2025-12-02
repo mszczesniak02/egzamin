@@ -339,12 +339,12 @@ function parseMarkdown(content) {
     let currentAnswerLines = [];
     let collectingAnswer = false;
 
-    // Regex patterns
-    const topicRegex = /^>\[!warning\]\s*#\s*(.*)/;
-    const subcatRegex = /^>>\[!danger\]\s*(?:##)?\s*(.*)/;
-    const questionRegex = /^>>>\[!question\](?:-)?\s*(?:####|###)?\s*(.*)/;
-    const answerStartRegex = /^>>>>\[!quote\]\s*(.*)/;
-    const anyTagRegex = /^>+\[!/;
+    // Regex patterns - flexible with '>' count and spacing
+    // Matches > [!tag], >> [!tag], >[!tag], etc.
+    const topicRegex = /^>+\s*\[!warning\]\s*#?\s*(.*)/;
+    const subcatRegex = /^>+\s*\[!danger\]\s*(?:##)?\s*(.*)/;
+    const questionRegex = /^>+\s*\[!question\](?:-)?\s*(?:####|###)?\s*(.*)/;
+    const answerStartRegex = /^>+\s*\[!quote\]\s*(.*)/;
 
     const saveCurrentQuestion = () => {
         if (currentQuestion && currentAnswerLines.length > 0) {
@@ -356,6 +356,7 @@ function parseMarkdown(content) {
             });
             currentAnswerLines = [];
             currentQuestion = null;
+            collectingAnswer = false;
         }
     };
 
@@ -365,6 +366,7 @@ function parseMarkdown(content) {
         // Topic
         const topicMatch = line.match(topicRegex);
         if (topicMatch) {
+            saveCurrentQuestion();
             currentTopic = topicMatch[1].trim();
             continue;
         }
@@ -372,6 +374,7 @@ function parseMarkdown(content) {
         // Subcategory
         const subcatMatch = line.match(subcatRegex);
         if (subcatMatch) {
+            saveCurrentQuestion();
             currentSubcategory = subcatMatch[1].trim();
             continue;
         }
@@ -396,21 +399,15 @@ function parseMarkdown(content) {
 
         // Answer Continuation
         if (collectingAnswer) {
-            // Stop on empty line or line with only '>' characters (hierarchy spacers)
-            if (line === '' || /^[>]+$/.test(line)) {
+            // Check if line starts with one or more '>'
+            if (/^>+/.test(line)) {
+                // Remove all leading '>' characters and optional space
+                const cleanLine = line.replace(/^>+\s?/, '');
+                currentAnswerLines.push(cleanLine);
+            } else {
+                // If line doesn't start with '>', it's not part of the answer block
                 collectingAnswer = false;
-                continue;
             }
-
-            // Check if we hit a new tag (redundant if caught above, but safe)
-            if (anyTagRegex.test(line)) {
-                collectingAnswer = false;
-                continue; 
-            }
-
-            // It is answer text. Remove leading >>>> if present
-            const cleanLine = line.replace(/^>>>>\s?/, '');
-            currentAnswerLines.push(cleanLine);
         }
     }
     saveCurrentQuestion();
