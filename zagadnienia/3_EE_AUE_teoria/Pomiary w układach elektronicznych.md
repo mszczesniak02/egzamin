@@ -24,6 +24,9 @@ Date: 14.10.2025
 > 
 >>[!important] #### Oscyloskop
 >>Co robi, jak robi, itd
+>> AC / DC coupling - sprzęganie sygnału w celu przepuszczenia go przez kapacytor ( jeżeli ac), jeżeli tryb DC, wejście jest podane bezpośrednio na wejście.
+>> 
+>> 
 >>
 
 ---
@@ -31,35 +34,34 @@ Date: 14.10.2025
 >[!warning] ## Wpływ ograniczeń sprzętowych podczas pomiarów, efekty pasożytniczę
 > Każdy sprzęt ma swoje ograniczenia, dla każdych z nich można zindentyfikować:
 >>[!info] ### Dla #multimetru:
->> - błąd  (związany z rozdzielczością)
+>> - błąd  (związany z rozdzielczością) - ograniczenie rozdzielczości w bitach, zakres wejściowy nie koniecznie jest zawsze dobrze odwzorowany
 >> - błąd  (związany z przybliżeniem)
 >> - błąd  (związany z sampling)
 >> - błąd  (związany z co jeszcze nie wiem, trzeba spytać czata)
 >
 >>[!danger] ### Dla #oscyloskopu i #sond oscyloskopowych
->> - błąd sranie kudpa i dupa
+>> - Czas integracji - Number of Power line Cycles - mniejrnik nie mierzy napięcia w jednostce czasu, lecz uśrednia w oknie czasowym, przy wolno zmieniających się sygnałów, wyższa opcja byłaby lepsza
+>> - Sonda oscyloskopowa oraz jej odpowiednik RF: ![[Pasted image 20251204162048.png|500]] [^5]
+>> -- 
+>> 
 
 ---
 
-# Aparatura obwodów [^1]
-- Dzielnik prądu - amperomierz, 
-- woltomierz, dzielniki napiecia
-- oscyloskop [^2]
 
 
-Coupling, co to jest
-
-### Ograniczenia pomiarów - odczyt błędu pomiarowego, jak zapisywać, z jakiej jest dystrubucji
-
-## #Błędy pomiarowe
-- błąd przypadkowy          
-- blład systematyczny  
-- błąd gruby 
-
-### Błąd graniczny - $\Delta~_{gr} = \frac{a\cdot x + b \cdot Z_{x}}{100}$  a - maksymalny odczyt, coś tam
-### Błąd bezwzględny i względny:  [^3]
-
-## Niepewność standardowa - odchylenie standardowe ze wszysich zmiennych po każdej zmiennej wpływającej na błąd [^4]
+>[!warning] # Błędy pomiarowe [^6]
+>>[!danger] ## Kategorie:
+>> - błędy statystyczne: ciągle się powtarzające, realie wpływające na kazdy wynik ze względu na sposób pomiaru, np. nieuwzględnienie 
+>> - błędy gruby: błędy typu źle przepisana wartość przecinka pomiaru z miernika
+>> - błąd przypadkowy: wyniki zmieniają się na skali błędu np. gaussa, błędy pokroju prawdopodobieństwa tolerancji w paczce rezystorów, wykonanych ze jednego materiału
+>> - błąd systematyczny: błąd wynikający z metody pomiaru, np. pominięcie zjawisk fizyczych jak zmienna temperatura mierząc I-V
+>
+>>[!danger] ## Niepewności pomiarowe
+>>  - Niepewność standardowa - równe stderr wedle rozkładu normalnego,
+>>  -  niepewność względa - stosunek niepewności do wielkości mierzonej w \%
+>> -  niepewność maksymalna - zwykle przedział  w kßórym miesczą się wszystkie wyniki pomiary, przeszłe i przyszłe!, wedle wzoru $$u(x)=\frac{\Delta x}{\sqrt{3}}$$
+>>[!warning] ## Przenoszenie niepewności:$$u_c= \sqrt{  \sum_{k} [ \frac{\partial y }{\partial x_k} u(x_k) ]^2  }$$ 
+>> To jest przenoszenie niepewności, robiąc pochodną cząstkową po każdej zmiennej zależnej
 
 
 
@@ -71,3 +73,7 @@ Coupling, co to jest
 [^3]: https://www.matemaks.pl/blad-bezwzgledny-i-wzgledny-pomiaru.html
 
 [^4]: https://pl.wikipedia.org/wiki/Niepewno%C5%9B%C4%87_standardowa_pomiaru
+
+[^5]: https://piotr-gorecki.pl/m056-sondy-oscyloskopowe-dlaczego-sa-niezbedne/
+
+[^6]: https://home.agh.edu.pl/~zak/downloads/RNP-2.pdf
